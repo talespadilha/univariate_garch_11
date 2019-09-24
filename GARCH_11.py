@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
-Created on Mon Sep 2019
+Created on Sep 2019
 
 @author: talespadilha
 """
@@ -40,8 +42,8 @@ def main(series):
     We estimate the following variance for the residuals(tex format):
         \sigma_t^2 = \omega + \alpha \epsilon_{t-1}^2 + \beta \sigma_{t-1}^2
         
-    garch11_params: List of mean zero residuals (epsilons)
-    Returns: The list of parameters param = [omega, alpha, beta]
+    series: List of mean zero residuals (epsilons). Type: numpy array.
+    garch11_params: The list of parameters param = [omega, alpha, beta]
     """
     # Making sure the series of residuals has mean zero:
     dm_series = series - series.mean()
